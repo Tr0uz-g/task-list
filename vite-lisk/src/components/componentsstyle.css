@@ -1,0 +1,101 @@
+body {
+    background-color: rgb(14, 13, 13);
+}
+
+.lista li {
+    border: 1px solid rgba(255, 255, 255, 0.877);
+    margin: 15px 0 15px 0;
+    height: 50px;
+    box-shadow:  1px 1px 1px rgba(255, 255, 255, 0.575);
+    
+}
+
+li {
+    display: flex;
+    align-items: center;
+    margin: 0 0 0 9px;
+    justify-content: space-around;
+    color: aqua;
+}
+
+
+
+.boton-doble {
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    position: absolute;
+    right: -57px;
+    max-height: 600px;
+    transition: background-color 0.3s ease;
+}
+.boton-doble:hover {
+    background-color: rgb(0, 155, 155); /* Cambia el color de fondo al pasar el mouse */
+}
+
+.boton-borrar {
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    position: absolute;
+    right: -35px;
+    box-shadow:  2px 2px 2px #fff;
+    width: 25px;
+    height: 25px;
+    transition: background-color 0.3s ease;
+}
+
+.boton-borrar:hover {
+    background-color: rgb(248, 0, 0); /* Cambia el color de fondo al pasar el mouse */
+}
+
+h1 {
+    position: relative;
+    color: aqua;
+    right: -187px;
+    margin-bottom: 30px;
+}
+
+.titulo h1{
+    animation: color 3s infinite;
+}
+
+@keyframes color {
+    0% {
+        color: rgb(95, 227, 245);
+    }
+    50% {
+        color: rgb(90, 159, 168);
+    }
+    
+    100% {
+        color: rgb(0, 193, 252);
+    }
+}
+
+
+.box-content input {
+    display: flex;
+}
+
+input {
+    margin: 2px 0 10px 0;
+    border: none;
+    height: 30px;
+    width: 400px;
+    background-color: transparent;
+    color: aqua;
+    padding: 10px; 
+    border-bottom: 1px solid #fff;
+    outline: none;
+}
+
+.add-boton {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    width: 50px;
+    height: 30px;
+    color: #fff;
+    font-size: larger;
+}
