@@ -1,13 +1,16 @@
 import React, { useState } from 'react'
+import { useTaskListContext } from './TaskListContext';
 import './componentsstyle.css'
 
 export default function TaskList() {
     const [titleInput, setTitleInput] = useState('');
     const [descriptionInput, setDescriptionInput] = useState('');
-    const [items, setItems] = useState([]);
     const [editTitle, setEditTitle] = useState('')
     const [editDescription, setEditDescription] = useState('')
     const [editIndex, setEditIndex] = useState(null);
+
+    const { items, addTask, deleteTask, updateTask } = useTaskListContext();
+
     
 
     const changeTitleInput = (e) => {
@@ -35,14 +38,7 @@ export default function TaskList() {
         updatedItems[index].completed = !updatedItems[index].completed;
         setItems(updatedItems);
     };
-
-
-    const deleteTask = (index) => {
-        const updatedItems = items.filter((_, i) => i !== index);
-        setItems(updatedItems);
-      };
-
-      const handleEditTask = (index) => {
+    const handleEditTask = (index) => {
         const taskEdit = items[index];
         setEditTitle(taskEdit.title);
         setEditDescription(taskEdit.description);
